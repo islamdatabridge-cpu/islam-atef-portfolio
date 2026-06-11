@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Terminal, Code, Database, Bug, Lock } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
 
@@ -33,25 +34,53 @@ const Skills = () => {
     }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+  };
+
   return (
     <section id="skills" className="container">
-      <h2 className="section-title">{t.skills.title}</h2>
-      <div className="skills-container">
-        {skillCategories.map((cat, idx) => (
-          <div key={idx} className="skill-category">
-            <h3 className="skill-category-title" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              {cat.icon} {cat.title}
-            </h3>
-            <div className="skills-grid">
-              {cat.skills.map((skill, sIdx) => (
-                <div key={sIdx} className="skill-tag">
-                  {skill}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        variants={containerVariants}
+      >
+        <h2 className="section-title">{t.skills.title}</h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
+          {skillCategories.map((cat, idx) => (
+            <motion.div key={idx} variants={itemVariants} className="skill-category-wrapper">
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
+                <div style={{ padding: '1rem', background: 'rgba(0, 255, 136, 0.1)', borderRadius: '12px' }}>
+                  {cat.icon}
                 </div>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
+                <h3 style={{ fontSize: '1.5rem', color: 'var(--text-color)', margin: 0 }}>{cat.title}</h3>
+              </div>
+              <div className="skills-grid">
+                {cat.skills.map((skill, sIdx) => (
+                  <motion.div 
+                    key={sIdx} 
+                    className="skill-tag"
+                    whileHover={{ scale: 1.05, y: -5 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
+                    {skill}
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
     </section>
   );
 };

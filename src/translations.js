@@ -15,10 +15,14 @@ export const translations = {
       hireMe: "Hire Me"
     },
     about: {
-      title: "About Me",
-      p1: "I am a passionate Full Stack Developer and Security Researcher. Unlike traditional developers, I build software with an offensive security mindset. I don't just write code; I anticipate how it can be broken and secure it from the ground up.",
-      p2: "My unique dual-expertise allows me to architect robust applications—ranging from complex web platforms to mobile and desktop software—while ensuring they are fortified against modern cyber threats.",
-      p3: "When I'm not developing elegant solutions for my clients, I hunt for vulnerabilities in major platforms. I am proud to be recognized by the Google Vulnerability Reward Program (VRP) for my contributions to making the web safer."
+      title: "Who Am I?",
+      p1: "I don't just write code; I engineer secure ecosystems. As a Full-Stack Developer and Cyber-Security Expert, I bridge the gap between building complex software and tearing it down to find vulnerabilities.",
+      p2: "I deliver robust, unhackable solutions across Web, Mobile, and Desktop platforms. From designing enterprise architectures to executing deep penetration tests, my dual-perspective ensures that every line of code is as secure as it is efficient.",
+      stats: {
+        clients: "Worldwide Clients",
+        projects: "Secure Deployments",
+        bounties: "Vulnerabilities Found"
+      }
     },
     services: {
       title: "My Services",
@@ -84,15 +88,19 @@ export const translations = {
       hireMe: "وظفني"
     },
     about: {
-      title: "عنّي",
-      p1: "أنا مطور برمجيات وباحث في الأمن السيبراني. على عكس المطورين التقليديين، أبني البرمجيات بعقلية الأمن الهجومي. لا أكتفي بكتابة الكود فقط، بل أتوقع كيف يمكن اختراقه وأقوم بتأمينه من الجذور.",
-      p2: "تتيح لي خبرتي المزدوجة هندسة تطبيقات قوية—بدءاً من منصات الويب المعقدة وحتى تطبيقات الموبايل وبرامج الديسكتوب—مع ضمان تحصينها ضد التهديدات السيبرانية الحديثة.",
-      p3: "عندما لا أقوم بتطوير حلول برمجية لعملائي، أبحث عن الثغرات في المنصات الكبرى. أفتخر بحصولي على تقدير من برنامج مكافآت ثغرات جوجل (Google VRP) لمساهمتي في جعل الويب مكاناً أكثر أماناً."
+      title: "من أنا؟",
+      p1: "أنا لست مجرد مطور برمجيات؛ أنا مهندس ومخترق (Hacker). أجمع بين بناء الأنظمة المعقدة من الصفر، واختبار اختراقها لاكتشاف الثغرات وتأمينها بالكامل.",
+      p2: "بخبرة واسعة تمتد من تطبيقات الويب والموبايل والديسك توب، إلى اختبار الاختراق المتقدم واكتشاف الثغرات. أقدم حلولاً متكاملة لا يمكن اختراقها، حيث أضمن أن كل سطر برمجي فعال وآمن في نفس الوقت.",
+      stats: {
+        clients: "عملاء حول العالم",
+        projects: "مشاريع آمنة",
+        bounties: "ثغرة مكتشفة"
+      }
     },
     services: {
       title: "خدماتي",
       web: { title: "تطوير الويب", desc: "تطبيقات ويب متكاملة، منصات مخصصة، مواقع ووردبريس، وتكامل مع أنظمة Odoo. مبنية للسرعة والتوسع." },
-      mobile: { title: "تطوير تطبيقات الموبايل", desc: "تطبيقات موبايل أصلية ومتقاطعة المنصات باستخدام Flutter, React Native, Java, Kotlin, Swift." },
+      mobile: { title: "تطوير تطبيقات الموبايل", desc: "تبيقات موبايل أصلية ومتقاطعة المنصات باستخدام Flutter, React Native, Java, Kotlin, Swift." },
       desktop: { title: "برامج ديسك توب", desc: "برمجيات سطح مكتب قوية لأنظمة الويندوز، الماك، واللينكس باستخدام C#, .NET, Python, Electron." },
       cyber: { title: "الأمن السيبراني واختبار الاختراق", desc: "تقييم الثغرات، اختبار الاختراق، وتأمين البنية التحتية ضد هجمات OWASP المتقدمة." },
       db: { title: "هندسة قواعد البيانات", desc: "تصميم وتحسين قواعد بيانات معقدة في MySQL, PostgreSQL, SQL Server, MongoDB." },

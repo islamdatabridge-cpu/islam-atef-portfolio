@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { ExternalLink, ShieldCheck } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
 
@@ -34,25 +35,41 @@ const Projects = () => {
 
   return (
     <section id="projects" className="container">
-      <h2 className="section-title">{t.projects.title}</h2>
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.6 }}
+      >
+        <h2 className="section-title">{t.projects.title}</h2>
       <div className="projects-grid">
         {projects.map((proj, idx) => (
-          <div key={idx} className="glass project-card">
+          <motion.div 
+            key={idx} 
+            className="glass project-card"
+            whileHover={{ y: -5 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
             <div className="project-content">
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
                 <h3 className="project-title">{proj.title}</h3>
                 {proj.icon}
               </div>
               <p className="project-desc">{proj.desc}</p>
-              <div className="project-tech">
-                {proj.tech.map((t, tIdx) => (
-                  <span key={tIdx} className="tech-tag">#{t}</span>
+              <div style={{ marginTop: 'auto', display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                {proj.tech.map((t, i) => (
+                  <span key={i} style={{ padding: '0.2rem 0.6rem', fontSize: '0.8rem', background: 'rgba(0,255,136,0.1)', color: 'var(--primary-color)', borderRadius: '4px', fontFamily: '"Fira Code", monospace' }}>
+                    {t}
+                  </span>
                 ))}
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
+      </motion.div>
     </section>
   );
 };
