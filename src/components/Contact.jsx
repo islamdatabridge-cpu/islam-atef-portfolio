@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, User, Link, MessageSquare } from 'lucide-react';
+import { Mail, User, Link, MessageSquare, Phone, MessageCircle } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
 
 const Contact = () => {
@@ -14,8 +14,13 @@ const Contact = () => {
         <p className="contact-text">
           {t.contact.text}
         </p>
+
+        <div style={{ margin: '2rem 0', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem', fontSize: '1.2rem', fontWeight: 'bold' }}>
+          <Phone size={24} className="text-primary" /> 
+          <span dir="ltr">01100665674</span>
+        </div>
         
-        <div className="social-links">
+        <div className="social-links" style={{ marginBottom: '2rem' }}>
           <a href="mailto:islam.data.bridge@gmail.com" className="social-link" title="Email" target="_blank" rel="noreferrer">
             <Mail size={24} />
           </a>
@@ -27,9 +32,12 @@ const Contact = () => {
           </a>
         </div>
         
-        <div style={{ marginTop: '3rem' }}>
+        <div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap' }}>
           <a href="mailto:islam.data.bridge@gmail.com" className="btn btn-primary">
             {t.contact.btn}
+          </a>
+          <a href="https://wa.me/201100665674" target="_blank" rel="noreferrer" className="btn btn-outline" style={{ borderColor: '#25D366', color: '#25D366' }}>
+            <MessageCircle size={20} /> {t.contact.whatsapp}
           </a>
         </div>
       </div>

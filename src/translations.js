@@ -57,7 +57,9 @@ export const translations = {
       title: "Initiate Handshake",
       subtitle: "Let's build something secure.",
       text: "Whether you have a complex software project in mind, need a security audit, or want to discuss bug bounties—my inbox is open.",
-      btn: "Send Transmission"
+      btn: "Send Transmission",
+      phone: "Phone: +20 110 066 5674",
+      whatsapp: "Chat on WhatsApp"
     }
   },
   ar: {
@@ -118,7 +120,9 @@ export const translations = {
       title: "تواصل معي",
       subtitle: "لنبني شيئاً آمناً معاً.",
       text: "سواء كان لديك مشروع برمجي معقد، أو تحتاج إلى مراجعة أمنية، أو تريد مناقشة اكتشاف الثغرات—صندوق الوارد الخاص بي مفتوح.",
-      btn: "إرسال رسالة"
+      btn: "إرسال رسالة",
+      phone: "الهاتف: 01100665674",
+      whatsapp: "تواصل عبر واتساب"
     }
   }
 };
