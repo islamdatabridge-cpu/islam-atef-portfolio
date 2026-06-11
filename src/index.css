@@ -61,6 +61,12 @@ a:hover {
   padding: 0 2rem;
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;

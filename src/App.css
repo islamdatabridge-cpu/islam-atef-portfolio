@@ -135,7 +135,7 @@ section {
 /* Services */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
 }
 
@@ -226,7 +226,7 @@ section {
 /* Projects / Achievements */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
 }
 
@@ -316,9 +316,33 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
+  }
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  section {
+    padding: 4rem 0;
   }
   .nav-links {
-    display: none; /* simple mobile fallback */
+    display: none;
+  }
+  .nav-links.mobile-open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--bg-color-light);
+    padding: 1.5rem;
+    gap: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+  .menu-toggle {
+    display: block !important;
   }
 }
