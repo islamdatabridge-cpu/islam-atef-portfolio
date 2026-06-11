@@ -1,0 +1,44 @@
+import React, { useState, useEffect } from 'react';
+import Hero from './components/Hero';
+import About from './components/About';
+import Services from './components/Services';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import Navbar from './components/Navbar';
+import './App.css';
+
+function App() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <div className="app">
+      <div className="bg-glow" style={{ top: '-100px', left: '-100px' }}></div>
+      <div className="bg-glow" style={{ top: '40%', right: '-200px', opacity: 0.5 }}></div>
+      <Navbar scrolled={scrolled} />
+      <main>
+        <Hero />
+        <About />
+        <Services />
+        <Skills />
+        <Projects />
+        <Contact />
+      </main>
+      <footer>
+        <div className="container">
+          <p>© {new Date().getFullYear()} Eng. Islam Atef. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  );
+}
+
+export default App;
