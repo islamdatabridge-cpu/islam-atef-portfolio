@@ -58,7 +58,7 @@ export const translations = {
         "Data Pro App",
         "Venus App",
         "Kefahy App",
-        "Kiran App",
+        "Kiran App & Desktop",
         "Nomo App",
         "Fekra Site"
       ]
@@ -131,7 +131,7 @@ export const translations = {
         "تطبيق داتا برو",
         "تطبيق فينوس",
         "تطبيق كفاحي",
-        "تطبيق كيران",
+        "تطبيق كيران (موبايل وديسك توب)",
         "تطبيق نمو",
         "موقع فكره"
       ]

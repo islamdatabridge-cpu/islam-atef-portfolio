@@ -1,7 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Lightbox from 'yet-another-react-lightbox';
-import 'yet-another-react-lightbox/styles.css';
+import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
+import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
+import "yet-another-react-lightbox/styles.css";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
+import { Activity, Database, ShoppingBag, Target, MonitorSmartphone, TrendingUp, Globe, Eye } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
 
 const imagesContext = import.meta.glob('../assets/portfolio/**/*.{jpg,jpeg,png}', { eager: true, query: '?url', import: 'default' });
@@ -23,35 +27,31 @@ const PreviousWork = () => {
     groupedImages[folderName].push({ src: imagesContext[path] });
   }
 
-  const folderNamesInOrder = [
-    'doctor_app',
-    'data_pro_app',
-    'venus_app',
-    'kefahy_app',
-    'kiran_app',
-    'nomo_app',
-    'fekra_site'
+  const folderConfig = [
+    { id: 'doctor_app', icon: <Activity size={32} /> },
+    { id: 'data_pro_app', icon: <Database size={32} /> },
+    { id: 'venus_app', icon: <ShoppingBag size={32} /> },
+    { id: 'kefahy_app', icon: <Target size={32} /> },
+    { id: 'kiran_app', icon: <MonitorSmartphone size={32} /> },
+    { id: 'nomo_app', icon: <TrendingUp size={32} /> },
+    { id: 'fekra_site', icon: <Globe size={32} /> }
   ];
 
-  const workItems = folderNamesInOrder.map((folder, index) => {
-    const images = groupedImages[folder] || [];
-    // Try to find the cover image, or default to first image
-    let coverImg = images[0]?.src || '';
-    const coverMatch = images.find(img => img.src.includes('cover'));
-    if (coverMatch) {
-      coverImg = coverMatch.src;
-    }
-    
+  const workItems = folderConfig.map((folder, index) => {
+    const images = groupedImages[folder.id] || [];
     return {
       title: t.previousWork.items[index],
-      coverImg,
+      icon: folder.icon,
       slides: images
     };
   });
 
   const openLightbox = (slides) => {
-    setCurrentSlides(slides);
-    setIsOpen(true);
+    if (slides.length > 0) {
+      setCurrentSlides(slides);
+      setPhotoIndex(0);
+      setIsOpen(true);
+    }
   };
 
   const containerVariants = {
@@ -63,8 +63,8 @@ const PreviousWork = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, scale: 0.9 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } }
+    hidden: { opacity: 0, scale: 0.9, y: 20 },
+    visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.5 } }
   };
 
   return (
@@ -79,40 +79,40 @@ const PreviousWork = () => {
         <p style={{ textAlign: 'center', marginBottom: '3rem', color: 'var(--text-muted)' }}>
           {t.previousWork.desc}
         </p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
           {workItems.map((item, index) => (
             <motion.div 
               key={index} 
               variants={itemVariants}
-              whileHover={{ y: -10 }}
+              whileHover={{ y: -10, scale: 1.02 }}
               className="glass project-card" 
-              style={{ overflow: 'hidden', borderRadius: '12px', cursor: 'pointer' }}
+              style={{ 
+                borderRadius: '16px', 
+                cursor: 'pointer',
+                padding: '2rem',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                textAlign: 'center',
+                border: '1px solid rgba(0,255,136,0.1)'
+              }}
               onClick={() => openLightbox(item.slides)}
             >
-              <div style={{ position: 'relative', overflow: 'hidden' }}>
-                <motion.img 
-                  src={item.coverImg} 
-                  alt={item.title} 
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ duration: 0.3 }}
-                  style={{ width: '100%', height: '220px', objectFit: 'cover', display: 'block' }} 
-                />
-                <div style={{
-                  position: 'absolute',
-                  bottom: 0,
-                  left: 0,
-                  width: '100%',
-                  height: '100%',
-                  background: 'linear-gradient(to top, rgba(0,0,0,0.8), transparent)',
-                  pointerEvents: 'none'
-                }}></div>
+              <div style={{ 
+                background: 'rgba(0, 255, 136, 0.1)', 
+                padding: '1.5rem', 
+                borderRadius: '50%', 
+                color: 'var(--primary-color)',
+                marginBottom: '1rem',
+                boxShadow: '0 0 20px rgba(0, 255, 136, 0.2)'
+              }}>
+                {item.icon}
               </div>
-              <div style={{ padding: '1.5rem', position: 'relative', zIndex: 1 }}>
-                <h3 style={{ margin: 0, fontSize: '1.2rem', color: 'var(--primary-color)' }}>{item.title}</h3>
-                <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginTop: '0.5rem' }}>
-                  {item.slides.length} Images
-                </p>
-              </div>
+              <h3 style={{ margin: 0, fontSize: '1.3rem', color: 'var(--text-main)' }}>{item.title}</h3>
+              <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginTop: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <Eye size={16} /> {item.slides.length} Screens
+              </p>
             </motion.div>
           ))}
         </div>
@@ -124,6 +124,9 @@ const PreviousWork = () => {
           close={() => setIsOpen(false)}
           slides={currentSlides}
           index={photoIndex}
+          plugins={[Slideshow, Thumbnails]}
+          slideshow={{ autoplay: true, delay: 2500 }}
+          thumbnails={{ position: 'bottom', width: 120, height: 80, border: 1, borderRadius: 4, padding: 4, gap: 16 }}
         />
       )}
     </section>
