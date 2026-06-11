@@ -41,7 +41,7 @@ export const translations = {
     },
     projects: {
       title: "Achievements & Highlights",
-      p1: { title: "Google VRP - 2x Vulnerabilities", desc: "Successfully discovered, exploited, and reported two critical vulnerabilities within Google's infrastructure, earning recognition in the Google Vulnerability Reward Program." },
+      p1: { title: "Bug Bounty Hunter", desc: "Recognized for discovering critical vulnerabilities and reporting them to major platforms including Bugcrowd, HackerOne, Huntr, and Google VRP." },
       p2: { title: "Enterprise Odoo ERP System", desc: "Developed and customized comprehensive Odoo modules for a major enterprise client, integrating secure payment gateways and optimizing database performance." },
       p3: { title: "Secure Healthcare React App", desc: "Built a HIPAA-compliant web application utilizing React and Node.js. Implemented strict authorization protocols, preventing IDOR and ensuring data integrity." },
       p4: { title: "Cross-Platform E-commerce Mobile App", desc: "Developed a Flutter-based e-commerce application with a Laravel backend. Features real-time tracking, secure checkout, and a seamless native-like UI." }
@@ -49,9 +49,15 @@ export const translations = {
     previousWork: {
       title: "Previous Work",
       desc: "Here are some of the projects I've built and delivered.",
-      item1: "Project Alpha",
-      item2: "Project Beta",
-      item3: "Project Gamma"
+      items: [
+        "Doctor App",
+        "Data Pro App",
+        "Venus App",
+        "Kefahy App",
+        "Kiran App",
+        "Nomo App",
+        "Fekra Site"
+      ]
     },
     contact: {
       title: "Initiate Handshake",
@@ -87,7 +93,7 @@ export const translations = {
       title: "خدماتي",
       web: { title: "تطوير الويب", desc: "تطبيقات ويب متكاملة، منصات مخصصة، مواقع ووردبريس، وتكامل مع أنظمة Odoo. مبنية للسرعة والتوسع." },
       mobile: { title: "تطوير تطبيقات الموبايل", desc: "تطبيقات موبايل أصلية ومتقاطعة المنصات باستخدام Flutter, React Native, Java, Kotlin, Swift." },
-      desktop: { title: "برامج الديسكتوب", desc: "برمجيات سطح مكتب قوية لأنظمة الويندوز، الماك، واللينكس باستخدام C#, .NET, Python, Electron." },
+      desktop: { title: "برامج ديسك توب", desc: "برمجيات سطح مكتب قوية لأنظمة الويندوز، الماك، واللينكس باستخدام C#, .NET, Python, Electron." },
       cyber: { title: "الأمن السيبراني واختبار الاختراق", desc: "تقييم الثغرات، اختبار الاختراق، وتأمين البنية التحتية ضد هجمات OWASP المتقدمة." },
       db: { title: "هندسة قواعد البيانات", desc: "تصميم وتحسين قواعد بيانات معقدة في MySQL, PostgreSQL, SQL Server, MongoDB." },
       backend: { title: "أمن الواجهات البرمجية (APIs)", desc: "تطوير APIs آمنة، آليات مصادقة قوية، ومنع ثغرات الـ Business Logic." }
@@ -104,7 +110,7 @@ export const translations = {
     },
     projects: {
       title: "إنجازات ومشاريع مميزة",
-      p1: { title: "Google VRP - ثغرتين أمنيتين", desc: "اكتشاف واستغلال والإبلاغ عن ثغرتين خطيرتين داخل بنية جوجل التحتية بنجاح، مما أدى للحصول على تقدير في برنامج مكافآت جوجل للثغرات." },
+      p1: { title: "اكتشاف الثغرات (Bug Bounty)", desc: "تم العمل مع كبرى المنصات واكتشاف ثغرات خطيرة والإبلاغ عنها بنجاح في: Bugcrowd، HackerOne، Huntr، و Google VRP." },
       p2: { title: "نظام Odoo ERP لمؤسسة كبرى", desc: "تطوير وتخصيص وحدات Odoo متكاملة، مع ربط بوابات الدفع الإلكتروني وتحسين أداء قواعد البيانات." },
       p3: { title: "تطبيق طبي آمن - React", desc: "تطبيق ويب متوافق مع معايير HIPAA باستخدام React و Node.js، مع بروتوكولات حماية صارمة لمنع ثغرات IDOR." },
       p4: { title: "تطبيق متجر إلكتروني للموبايل", desc: "تطبيق متجر إلكتروني باستخدام Flutter مع واجهة خلفية بـ Laravel. يتميز بالتتبع اللحظي والدفع الآمن." }
@@ -112,9 +118,15 @@ export const translations = {
     previousWork: {
       title: "أعمالنا السابقة",
       desc: "بعض من المشاريع التي قمنا بتنفيذها وتسليمها.",
-      item1: "المشروع الأول",
-      item2: "المشروع الثاني",
-      item3: "المشروع الثالث"
+      items: [
+        "تطبيق الدكتور",
+        "تطبيق داتا برو",
+        "تطبيق فينوس",
+        "تطبيق كفاحي",
+        "تطبيق كيران",
+        "تطبيق نمو",
+        "موقع فكره"
+      ]
     },
     contact: {
       title: "تواصل معي",

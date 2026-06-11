@@ -20,17 +20,7 @@ const Contact = () => {
           <span dir="ltr">01100665674</span>
         </div>
         
-        <div className="social-links" style={{ marginBottom: '2rem' }}>
-          <a href="mailto:islam.data.bridge@gmail.com" className="social-link" title="Email" target="_blank" rel="noreferrer">
-            <Mail size={24} />
-          </a>
-          <a href="https://github.com/islamdatabridge-cpu" className="social-link" title="GitHub" target="_blank" rel="noreferrer">
-            <Link size={24} />
-          </a>
-          <a href="#" className="social-link" title="LinkedIn" target="_blank" rel="noreferrer">
-            <User size={24} />
-          </a>
-        </div>
+
         
         <div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap' }}>
           <a href="mailto:islam.data.bridge@gmail.com" className="btn btn-primary">

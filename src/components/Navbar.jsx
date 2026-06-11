@@ -9,7 +9,7 @@ const Navbar = ({ scrolled }) => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
         <div className="nav-logo" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <img src={logo} alt="Islam Atef Logo" style={{ height: '80px', width: 'auto', borderRadius: '8px' }} />
+          <img src={logo} alt="Islam Atef Logo" style={{ height: '120px', width: 'auto', borderRadius: '12px' }} />
         </div>
         <div className="nav-links">
           <a href="#about" className="nav-link">{t.nav.about}</a>

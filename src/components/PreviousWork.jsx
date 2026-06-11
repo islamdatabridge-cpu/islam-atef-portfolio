@@ -1,16 +1,26 @@
 import React from 'react';
 import { useLanguage } from '../LanguageContext';
 
+// Import images
+import imgDoctor from '../assets/portfolio/doctor_app/cover.jpeg';
+import imgDataPro from '../assets/portfolio/data_pro_app/cover.jpeg';
+import imgVenus from '../assets/portfolio/venus_app/cover.jpg';
+import imgKefahy from '../assets/portfolio/kefahy_app/cover.jpg';
+import imgKiran from '../assets/portfolio/kiran_app/cover.jpeg';
+import imgNomo from '../assets/portfolio/nomo_app/cover.jpeg';
+import imgFekra from '../assets/portfolio/fekra_site/cover.jpg';
+
 const PreviousWork = () => {
   const { t } = useLanguage();
 
-  // Array of placeholder projects
-  // In the future, you can put your images in src/assets/portfolio/
-  // and import them here, e.g. import proj1 from '../assets/portfolio/project1.png'
   const workItems = [
-    { title: t.previousWork.item1, imgUrl: "https://via.placeholder.com/600x400/111111/00ff88?text=Project+1" },
-    { title: t.previousWork.item2, imgUrl: "https://via.placeholder.com/600x400/111111/00ff88?text=Project+2" },
-    { title: t.previousWork.item3, imgUrl: "https://via.placeholder.com/600x400/111111/00ff88?text=Project+3" },
+    { title: t.previousWork.items[0], imgUrl: imgDoctor },
+    { title: t.previousWork.items[1], imgUrl: imgDataPro },
+    { title: t.previousWork.items[2], imgUrl: imgVenus },
+    { title: t.previousWork.items[3], imgUrl: imgKefahy },
+    { title: t.previousWork.items[4], imgUrl: imgKiran },
+    { title: t.previousWork.items[5], imgUrl: imgNomo },
+    { title: t.previousWork.items[6], imgUrl: imgFekra },
   ];
 
   return (
