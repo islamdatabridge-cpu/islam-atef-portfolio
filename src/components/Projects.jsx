@@ -1,29 +1,32 @@
 import React from 'react';
 import { ExternalLink, ShieldCheck } from 'lucide-react';
+import { useLanguage } from '../LanguageContext';
 
 const Projects = () => {
+  const { t } = useLanguage();
+
   const projects = [
     {
-      title: "Google VRP - 2x Vulnerabilities",
-      desc: "Successfully discovered, exploited, and reported two critical vulnerabilities within Google's infrastructure, earning recognition in the Google Vulnerability Reward Program.",
+      title: t.projects.p1.title,
+      desc: t.projects.p1.desc,
       tech: ["Bug Bounty", "Manual Pentesting", "Google VRP"],
       icon: <ShieldCheck size={20} className="text-primary" />
     },
     {
-      title: "Enterprise Odoo ERP System",
-      desc: "Developed and customized comprehensive Odoo modules for a major enterprise client, integrating secure payment gateways and optimizing database performance.",
+      title: t.projects.p2.title,
+      desc: t.projects.p2.desc,
       tech: ["Odoo", "Python", "PostgreSQL", "XML"],
       icon: <ExternalLink size={20} className="text-primary" />
     },
     {
-      title: "Secure Healthcare React App",
-      desc: "Built a HIPAA-compliant web application utilizing React and Node.js. Implemented strict authorization protocols, preventing IDOR and ensuring data integrity.",
+      title: t.projects.p3.title,
+      desc: t.projects.p3.desc,
       tech: ["React", "Node.js", "Express", "MongoDB", "OAuth2"],
       icon: <ExternalLink size={20} className="text-primary" />
     },
     {
-      title: "Cross-Platform E-commerce Mobile App",
-      desc: "Developed a Flutter-based e-commerce application with a Laravel backend. Features real-time tracking, secure checkout, and a seamless native-like UI.",
+      title: t.projects.p4.title,
+      desc: t.projects.p4.desc,
       tech: ["Flutter", "Dart", "Laravel", "PHP", "MySQL"],
       icon: <ExternalLink size={20} className="text-primary" />
     }
@@ -31,7 +34,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="container">
-      <h2 className="section-title">Projects & Achievements</h2>
+      <h2 className="section-title">{t.projects.title}</h2>
       <div className="projects-grid">
         {projects.map((proj, idx) => (
           <div key={idx} className="glass project-card">

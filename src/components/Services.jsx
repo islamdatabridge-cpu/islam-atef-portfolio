@@ -1,43 +1,46 @@
 import React from 'react';
 import { Globe, Smartphone, Monitor, ShieldAlert, Database, Server } from 'lucide-react';
+import { useLanguage } from '../LanguageContext';
 
 const Services = () => {
+  const { t } = useLanguage();
+
   const services = [
     {
       icon: <Globe size={40} />,
-      title: "Web Development",
-      desc: "Full Stack web applications, custom platforms, WordPress sites, and Odoo integrations. Built for scale and speed."
+      title: t.services.web.title,
+      desc: t.services.web.desc
     },
     {
       icon: <Smartphone size={40} />,
-      title: "Mobile Development",
-      desc: "Cross-platform and native mobile apps using Flutter, React Native, Java, Kotlin, and Swift."
+      title: t.services.mobile.title,
+      desc: t.services.mobile.desc
     },
     {
       icon: <Monitor size={40} />,
-      title: "Desktop Applications",
-      desc: "Robust desktop software for Windows, macOS, and Linux using C#, .NET, Python, and Electron."
+      title: t.services.desktop.title,
+      desc: t.services.desktop.desc
     },
     {
       icon: <ShieldAlert size={40} />,
-      title: "Cybersecurity & Pen-Testing",
-      desc: "Vulnerability assessments, penetration testing, and securing infrastructure against OWASP top 10 and advanced threats."
+      title: t.services.cyber.title,
+      desc: t.services.cyber.desc
     },
     {
       icon: <Database size={40} />,
-      title: "Database Architecture",
-      desc: "Designing and optimizing complex database structures in MySQL, PostgreSQL, SQL Server, and MongoDB."
+      title: t.services.db.title,
+      desc: t.services.db.desc
     },
     {
       icon: <Server size={40} />,
-      title: "Backend & API Security",
-      desc: "Secure API development, authentication mechanisms, and preventing Business Logic and API vulnerabilities."
+      title: t.services.backend.title,
+      desc: t.services.backend.desc
     }
   ];
 
   return (
     <section id="services" className="container">
-      <h2 className="section-title">My Services</h2>
+      <h2 className="section-title">{t.services.title}</h2>
       <div className="services-grid">
         {services.map((service, index) => (
           <div key={index} className="glass service-card">

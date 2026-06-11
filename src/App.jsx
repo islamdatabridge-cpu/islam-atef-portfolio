@@ -4,8 +4,10 @@ import About from './components/About';
 import Services from './components/Services';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import PreviousWork from './components/PreviousWork';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
+import { LanguageProvider } from './LanguageContext';
 import './App.css';
 
 function App() {
@@ -20,8 +22,9 @@ function App() {
   }, []);
 
   return (
-    <div className="app">
-      <div className="bg-glow" style={{ top: '-100px', left: '-100px' }}></div>
+    <LanguageProvider>
+      <div className="app">
+        <div className="bg-glow" style={{ top: '-100px', left: '-100px' }}></div>
       <div className="bg-glow" style={{ top: '40%', right: '-200px', opacity: 0.5 }}></div>
       <Navbar scrolled={scrolled} />
       <main>
@@ -30,6 +33,7 @@ function App() {
         <Services />
         <Skills />
         <Projects />
+        <PreviousWork />
         <Contact />
       </main>
       <footer>
@@ -38,6 +42,7 @@ function App() {
         </div>
       </footer>
     </div>
+    </LanguageProvider>
   );
 }
 

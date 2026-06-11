@@ -1,30 +1,33 @@
 import React from 'react';
 import { Terminal, Code, Database, Bug, Lock } from 'lucide-react';
+import { useLanguage } from '../LanguageContext';
 
 const Skills = () => {
+  const { t } = useLanguage();
+
   const skillCategories = [
     {
-      title: "Backend & Frameworks",
+      title: t.skills.categories[0],
       icon: <Code size={24} className="text-primary" />,
       skills: ["PHP", "Laravel", "Node.js", "Python", "Django", "ASP.NET", "C#"]
     },
     {
-      title: "Frontend & Mobile",
+      title: t.skills.categories[1],
       icon: <Terminal size={24} className="text-primary" />,
       skills: ["React", "Vue", "Angular", "Flutter", "React Native", "Kotlin", "Swift", "Vanilla JS"]
     },
     {
-      title: "Databases & CMS",
+      title: t.skills.categories[2],
       icon: <Database size={24} className="text-primary" />,
       skills: ["MySQL", "PostgreSQL", "SQL Server", "MongoDB", "WordPress", "Odoo", "WooCommerce"]
     },
     {
-      title: "Vulnerability Expertise",
+      title: t.skills.categories[3],
       icon: <Bug size={24} className="text-primary" />,
       skills: ["XSS", "SQLi", "IDOR", "SSRF", "CSRF", "Auth Bypass", "Business Logic", "API Sec"]
     },
     {
-      title: "Security Tools",
+      title: t.skills.categories[4],
       icon: <Lock size={24} className="text-primary" />,
       skills: ["Burp Suite", "Nuclei", "FFUF", "Nmap", "Metasploit", "Wireshark", "Kali Linux"]
     }
@@ -32,7 +35,7 @@ const Skills = () => {
 
   return (
     <section id="skills" className="container">
-      <h2 className="section-title">Technical Arsenal</h2>
+      <h2 className="section-title">{t.skills.title}</h2>
       <div className="skills-container">
         {skillCategories.map((cat, idx) => (
           <div key={idx} className="skill-category">
