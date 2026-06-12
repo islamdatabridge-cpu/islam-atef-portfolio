@@ -24,24 +24,23 @@ function App() {
   return (
     <LanguageProvider>
       <div className="app">
-        <div className="bg-glow" style={{ top: '-100px', left: '-100px' }}></div>
-      <div className="bg-glow" style={{ top: '40%', right: '-200px', opacity: 0.5 }}></div>
-      <Navbar scrolled={scrolled} />
-      <main>
-        <Hero />
-        <About />
-        <Services />
-        <Skills />
-        <Projects />
-        <PreviousWork />
-        <Contact />
-      </main>
-      <footer>
-        <div className="container">
-          <p>© {new Date().getFullYear()} Eng. Islam Atef. All rights reserved.</p>
-        </div>
-      </footer>
-    </div>
+        <div className="bg-mesh"></div>
+        <Navbar scrolled={scrolled} />
+        <main>
+          <Hero />
+          <About />
+          <Services />
+          <Skills />
+          <Projects />
+          <PreviousWork />
+          <Contact />
+        </main>
+        <footer>
+          <div className="container">
+            <p>© {new Date().getFullYear()} Eng. Islam Atef. All rights reserved.</p>
+          </div>
+        </footer>
+      </div>
     </LanguageProvider>
   );
 }

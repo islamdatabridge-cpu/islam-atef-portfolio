@@ -79,33 +79,30 @@ const PreviousWork = () => {
         <p style={{ textAlign: 'center', marginBottom: '3rem', color: 'var(--text-muted)' }}>
           {t.previousWork.desc}
         </p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
           {workItems.map((item, index) => (
             <motion.div 
               key={index} 
               variants={itemVariants}
-              whileHover={{ y: -10, scale: 1.02 }}
-              className="glass project-card" 
+              whileHover={{ y: -5, scale: 1.02 }}
+              className="card" 
               style={{ 
-                borderRadius: '16px', 
                 cursor: 'pointer',
                 padding: '2rem',
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'center',
-                textAlign: 'center',
-                border: '1px solid rgba(0,255,136,0.1)'
+                textAlign: 'center'
               }}
               onClick={() => openLightbox(item.slides)}
             >
               <div style={{ 
-                background: 'rgba(0, 255, 136, 0.1)', 
+                background: 'var(--primary-glow)', 
                 padding: '1.5rem', 
                 borderRadius: '50%', 
-                color: 'var(--primary-color)',
-                marginBottom: '1rem',
-                boxShadow: '0 0 20px rgba(0, 255, 136, 0.2)'
+                color: 'var(--primary)',
+                marginBottom: '1.5rem'
               }}>
                 {item.icon}
               </div>

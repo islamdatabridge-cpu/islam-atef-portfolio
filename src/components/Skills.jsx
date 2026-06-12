@@ -56,21 +56,21 @@ const Skills = () => {
         variants={containerVariants}
       >
         <h2 className="section-title">{t.skills.title}</h2>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
+        <div>
           {skillCategories.map((cat, idx) => (
-            <motion.div key={idx} variants={itemVariants} className="skill-category-wrapper">
+            <motion.div key={idx} variants={itemVariants} className="skills-category">
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-                <div style={{ padding: '1rem', background: 'rgba(0, 255, 136, 0.1)', borderRadius: '12px' }}>
+                <div style={{ padding: '0.75rem', background: 'var(--primary-glow)', borderRadius: '12px', color: 'var(--primary)', display: 'flex' }}>
                   {cat.icon}
                 </div>
-                <h3 style={{ fontSize: '1.5rem', color: 'var(--text-color)', margin: 0 }}>{cat.title}</h3>
+                <h3 style={{ fontSize: '1.5rem', color: 'var(--text-main)', margin: 0 }}>{cat.title}</h3>
               </div>
-              <div className="skills-grid">
+              <div className="skills-flex">
                 {cat.skills.map((skill, sIdx) => (
                   <motion.div 
                     key={sIdx} 
-                    className="skill-tag"
-                    whileHover={{ scale: 1.05, y: -5 }}
+                    className="skill-item"
+                    whileHover={{ scale: 1.05, y: -2 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
                     {skill}

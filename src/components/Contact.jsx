@@ -8,25 +8,23 @@ const Contact = () => {
   return (
     <section id="contact" className="container">
       <h2 className="section-title">{t.contact.title}</h2>
-      <div className="contact-container glass" style={{ padding: '3rem 2rem' }}>
-        <MessageSquare size={48} className="text-primary" style={{ margin: '0 auto 1.5rem auto' }} />
-        <h3 style={{ fontSize: '1.8rem', marginBottom: '1rem' }}>{t.contact.subtitle}</h3>
+      <div className="contact-container card" style={{ padding: '4rem 2rem', border: '1px solid var(--border-color)' }}>
+        <MessageSquare size={48} style={{ margin: '0 auto 1.5rem auto', color: 'var(--primary)' }} />
+        <h3 style={{ fontSize: '1.8rem', marginBottom: '1rem', color: 'var(--text-main)' }}>{t.contact.subtitle}</h3>
         <p className="contact-text">
           {t.contact.text}
         </p>
 
-        <div style={{ margin: '2rem 0', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem', fontSize: '1.2rem', fontWeight: 'bold' }}>
-          <Phone size={24} className="text-primary" /> 
+        <div style={{ margin: '2rem 0', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.75rem', fontSize: '1.3rem', fontWeight: 'bold', color: 'var(--text-main)' }}>
+          <Phone size={24} style={{ color: 'var(--primary)' }} /> 
           <span dir="ltr">01100665674</span>
         </div>
         
-
-        
-        <div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap' }}>
-          <a href="mailto:islam.data.bridge@gmail.com" className="btn btn-primary">
-            {t.contact.btn}
+        <div style={{ marginTop: '3rem', display: 'flex', justifyContent: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
+          <a href="mailto:islam.data.bridge@gmail.com" className="btn btn-primary" style={{ padding: '1rem 2rem' }}>
+            <Mail size={20} /> {t.contact.btn}
           </a>
-          <a href="https://wa.me/201100665674" target="_blank" rel="noreferrer" className="btn btn-outline" style={{ borderColor: '#25D366', color: '#25D366' }}>
+          <a href="https://wa.me/201100665674" target="_blank" rel="noreferrer" className="btn btn-outline" style={{ borderColor: '#25D366', color: '#25D366', padding: '1rem 2rem' }}>
             <MessageCircle size={20} /> {t.contact.whatsapp}
           </a>
         </div>

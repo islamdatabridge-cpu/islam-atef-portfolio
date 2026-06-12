@@ -41,9 +41,9 @@ const Services = () => {
   return (
     <section id="services" className="container">
       <h2 className="section-title">{t.services.title}</h2>
-      <div className="services-grid">
+      <div className="card-grid">
         {services.map((service, index) => (
-          <div key={index} className="glass service-card">
+          <div key={index} className="card service-content">
             <div className="service-icon">{service.icon}</div>
             <h3 className="service-title">{service.title}</h3>
             <p className="service-desc">{service.desc}</p>

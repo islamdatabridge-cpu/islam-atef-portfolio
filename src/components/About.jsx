@@ -31,15 +31,15 @@ const About = () => {
             {t.about.stats && (
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))', gap: '1rem', marginTop: '2rem' }}>
                 <div className="stat-card glass" style={{ textAlign: 'center', padding: '1rem', borderRadius: '12px' }}>
-                  <h3 style={{ fontSize: '2rem', color: 'var(--primary-color)', margin: 0 }}>50+</h3>
+                  <h3 style={{ fontSize: '2rem', color: 'var(--primary)', margin: 0 }}>50+</h3>
                   <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>{t.about.stats.clients}</p>
                 </div>
                 <div className="stat-card glass" style={{ textAlign: 'center', padding: '1rem', borderRadius: '12px' }}>
-                  <h3 style={{ fontSize: '2rem', color: 'var(--primary-color)', margin: 0 }}>120+</h3>
+                  <h3 style={{ fontSize: '2rem', color: 'var(--primary)', margin: 0 }}>120+</h3>
                   <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>{t.about.stats.projects}</p>
                 </div>
                 <div className="stat-card glass" style={{ textAlign: 'center', padding: '1rem', borderRadius: '12px' }}>
-                  <h3 style={{ fontSize: '2rem', color: 'var(--primary-color)', margin: 0 }}>300+</h3>
+                  <h3 style={{ fontSize: '2rem', color: 'var(--primary)', margin: 0 }}>300+</h3>
                   <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>{t.about.stats.bounties}</p>
                 </div>
               </div>

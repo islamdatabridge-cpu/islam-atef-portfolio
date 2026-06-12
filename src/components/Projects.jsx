@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, ShieldCheck } from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
 
 const Projects = () => {
@@ -11,25 +11,33 @@ const Projects = () => {
       title: t.projects.p1.title,
       desc: t.projects.p1.desc,
       tech: ["Bug Bounty", "Manual Pentesting", "Google VRP"],
-      icon: <ShieldCheck size={20} className="text-primary" />
+      image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=600",
+      demoLink: "#",
+      repoLink: "#"
     },
     {
       title: t.projects.p2.title,
       desc: t.projects.p2.desc,
       tech: ["Odoo", "Python", "PostgreSQL", "XML"],
-      icon: <ExternalLink size={20} className="text-primary" />
+      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=600",
+      demoLink: "#",
+      repoLink: "#"
     },
     {
       title: t.projects.p3.title,
       desc: t.projects.p3.desc,
       tech: ["React", "Node.js", "Express", "MongoDB", "OAuth2"],
-      icon: <ExternalLink size={20} className="text-primary" />
+      image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&q=80&w=600",
+      demoLink: "#",
+      repoLink: "#"
     },
     {
       title: t.projects.p4.title,
       desc: t.projects.p4.desc,
       tech: ["Flutter", "Dart", "Laravel", "PHP", "MySQL"],
-      icon: <ExternalLink size={20} className="text-primary" />
+      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=600",
+      demoLink: "#",
+      repoLink: "#"
     }
   ];
 
@@ -42,33 +50,41 @@ const Projects = () => {
         transition={{ duration: 0.6 }}
       >
         <h2 className="section-title">{t.projects.title}</h2>
-      <div className="projects-grid">
-        {projects.map((proj, idx) => (
-          <motion.div 
-            key={idx} 
-            className="glass project-card"
-            whileHover={{ y: -5 }}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-          >
-            <div className="project-content">
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
+        <div className="card-grid">
+          {projects.map((proj, idx) => (
+            <motion.div 
+              key={idx} 
+              className="card"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1 }}
+            >
+              <div className="project-image">
+                <img src={proj.image} alt={proj.title} />
+              </div>
+              <div className="project-content">
                 <h3 className="project-title">{proj.title}</h3>
-                {proj.icon}
+                <p className="project-desc">{proj.desc}</p>
+                <div className="project-tech">
+                  {proj.tech.map((t, i) => (
+                    <span key={i} className="tech-pill">
+                      {t}
+                    </span>
+                  ))}
+                </div>
+                <div className="project-links">
+                  <a href={proj.demoLink} target="_blank" rel="noreferrer">
+                    <ExternalLink size={18} /> Live Demo
+                  </a>
+                  <a href={proj.repoLink} target="_blank" rel="noreferrer">
+                    <Github size={18} /> Code
+                  </a>
+                </div>
               </div>
-              <p className="project-desc">{proj.desc}</p>
-              <div style={{ marginTop: 'auto', display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-                {proj.tech.map((t, i) => (
-                  <span key={i} style={{ padding: '0.2rem 0.6rem', fontSize: '0.8rem', background: 'rgba(0,255,136,0.1)', color: 'var(--primary-color)', borderRadius: '4px', fontFamily: '"Fira Code", monospace' }}>
-                    {t}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-        ))}
-      </div>
+            </motion.div>
+          ))}
+        </div>
       </motion.div>
     </section>
   );
