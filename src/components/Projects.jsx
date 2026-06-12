@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Code } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
 
 const Projects = () => {
@@ -78,7 +78,7 @@ const Projects = () => {
                     <ExternalLink size={18} /> Live Demo
                   </a>
                   <a href={proj.repoLink} target="_blank" rel="noreferrer">
-                    <Github size={18} /> Code
+                    <Code size={18} /> Code
                   </a>
                 </div>
               </div>
