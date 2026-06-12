@@ -1,31 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
 
 :root {
-  --bg-color: #f5f5f5; /* Light background */
-  --bg-color-light: #e0e0e0; /* Light subtle */
-  --primary-color: #0077b6; /* Professional blue */
-  --primary-color-dim: rgba(0, 119, 182, 0.2);
-  --text-main: #212121; /* Dark text */
-  --text-muted: #555555; /* Muted text */
+  --bg-color: #f8f9fa; /* Light background */
+  --bg-color-light: #ffffff; /* Card background */
+  --primary-color: #2563eb; /* Professional blue */
+  --primary-color-dim: rgba(37, 99, 235, 0.15);
+  --text-main: #1f2937; /* Dark text */
+  --text-muted: #6b7280; /* Muted text */
   --border-color: rgba(0, 0, 0, 0.1);
-  --glass-bg: rgba(255, 255, 255, 0.6);
+  --glass-bg: rgba(255, 255, 255, 0.8);
   --glass-border: rgba(0, 0, 0, 0.05);
 }
 
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-color: #212121; /* Dark background */
-    --bg-color-light: #2c2c2c; /* Slightly lighter */
-    --primary-color: #66b2ff; /* Light professional blue */
-    --primary-color-dim: rgba(102, 178, 255, 0.2);
-    --text-main: #f5f5f5; /* Light text */
-    --text-muted: #bbbbbb; /* Muted light */
-    --border-color: rgba(255, 255, 255, 0.1);
-    --glass-bg: rgba(20, 20, 20, 0.6);
-    --glass-border: rgba(255, 255, 255, 0.05);
-  }
+[data-theme='dark'] {
+  --bg-color: #0f172a; /* Dark professional blue/gray */
+  --bg-color-light: #1e293b; /* Card background */
+  --primary-color: #3b82f6; /* Lighter blue for dark mode */
+  --primary-color-dim: rgba(59, 130, 246, 0.2);
+  --text-main: #f8fafc; /* Light text */
+  --text-muted: #94a3b8; /* Muted text */
+  --border-color: rgba(255, 255, 255, 0.1);
+  --glass-bg: rgba(15, 23, 42, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.05);
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -38,6 +36,7 @@ body {
   color: var(--text-main);
   line-height: 1.6;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1, h2, h3, h4, h5, h6 {
