@@ -1,26 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
 
 :root {
-  --bg-color: #ffffff; /* Light background */
-  --bg-color-light: #f0f0f0; /* Slightly darker for subtle contrast */
-  --primary-color: #e74c3c; /* Red accent */
-  --primary-color-dim: rgba(231, 76, 60, 0.2);
-  --text-main: #000000; /* Dark text for readability */
+  --bg-color: #f5f5f5; /* Light background */
+  --bg-color-light: #e0e0e0; /* Light subtle */
+  --primary-color: #0077b6; /* Professional blue */
+  --primary-color-dim: rgba(0, 119, 182, 0.2);
+  --text-main: #212121; /* Dark text */
   --text-muted: #555555; /* Muted text */
   --border-color: rgba(0, 0, 0, 0.1);
   --glass-bg: rgba(255, 255, 255, 0.6);
   --glass-border: rgba(0, 0, 0, 0.05);
 }
 
-/* Dark mode fallback */
+/* Dark mode */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: #050505;
-    --bg-color-light: #111111;
-    --primary-color: #00ff88; /* Neon Green */
-    --primary-color-dim: rgba(0, 255, 136, 0.2);
-    --text-main: #ffffff;
-    --text-muted: #a0a0a0;
+    --bg-color: #212121; /* Dark background */
+    --bg-color-light: #2c2c2c; /* Slightly lighter */
+    --primary-color: #66b2ff; /* Light professional blue */
+    --primary-color-dim: rgba(102, 178, 255, 0.2);
+    --text-main: #f5f5f5; /* Light text */
+    --text-muted: #bbbbbb; /* Muted light */
     --border-color: rgba(255, 255, 255, 0.1);
     --glass-bg: rgba(20, 20, 20, 0.6);
     --glass-border: rgba(255, 255, 255, 0.05);
