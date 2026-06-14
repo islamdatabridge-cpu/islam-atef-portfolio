@@ -21,17 +21,14 @@ const Contact = () => {
         </div>
         
         <div style={{ marginTop: '3rem', display: 'flex', justifyContent: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
-          <a href="mailto:islam.data.bridge@gmail.com" className="btn btn-primary" style={{ padding: '1rem 2rem' }}>
-            <Mail size={20} /> {t.contact.btn}
+          <a href="https://wa.me/201100665674" target="_blank" rel="noreferrer" className="btn btn-outline" style={{ borderColor: '#25D366', color: '#25D366', padding: '1rem', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '3rem', height: '3rem' }}>
+            <MessageCircle size={24} />
           </a>
-          <a href="https://wa.me/201100665674" target="_blank" rel="noreferrer" className="btn btn-outline" style={{ borderColor: '#25D366', color: '#25D366', padding: '1rem 2rem' }}>
-            <MessageCircle size={20} /> {t.contact.whatsapp}
+          <a href="https://www.linkedin.com/in/islam-atef-a23962415?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noreferrer" className="btn btn-outline" style={{ borderColor: '#0077b5', color: '#0077b5', padding: '1rem', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '3rem', height: '3rem' }}>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
           </a>
-          <a href="https://www.linkedin.com/in/islam-atef-a23962415?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noreferrer" className="btn btn-outline" style={{ borderColor: '#0077b5', color: '#0077b5', padding: '1rem 2rem' }}>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg> LinkedIn
-          </a>
-          <a href="https://www.facebook.com/profile.php?id=61590209263834" target="_blank" rel="noreferrer" className="btn btn-outline" style={{ borderColor: '#1877f2', color: '#1877f2', padding: '1rem 2rem' }}>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg> Facebook
+          <a href="https://www.facebook.com/profile.php?id=61590209263834" target="_blank" rel="noreferrer" className="btn btn-outline" style={{ borderColor: '#1877f2', color: '#1877f2', padding: '1rem', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '3rem', height: '3rem' }}>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
           </a>
         </div>
       </div>
