@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, User, Link, MessageSquare, Phone, MessageCircle, Facebook, Linkedin } from 'lucide-react';
+import { Mail, User, Link, MessageSquare, Phone, MessageCircle } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
 
 const Contact = () => {
@@ -28,10 +28,10 @@ const Contact = () => {
             <MessageCircle size={20} /> {t.contact.whatsapp}
           </a>
           <a href="https://www.linkedin.com/in/islam-atef-a23962415?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noreferrer" className="btn btn-outline" style={{ borderColor: '#0077b5', color: '#0077b5', padding: '1rem 2rem' }}>
-            <Linkedin size={20} /> LinkedIn
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg> LinkedIn
           </a>
           <a href="https://www.facebook.com/profile.php?id=61590209263834" target="_blank" rel="noreferrer" className="btn btn-outline" style={{ borderColor: '#1877f2', color: '#1877f2', padding: '1rem 2rem' }}>
-            <Facebook size={20} /> Facebook
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg> Facebook
           </a>
         </div>
       </div>
