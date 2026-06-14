@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, User, Link, MessageSquare, Phone, MessageCircle } from 'lucide-react';
+import { Mail, User, Link, MessageSquare, Phone, MessageCircle, Facebook, Linkedin } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
 
 const Contact = () => {
@@ -26,6 +26,12 @@ const Contact = () => {
           </a>
           <a href="https://wa.me/201100665674" target="_blank" rel="noreferrer" className="btn btn-outline" style={{ borderColor: '#25D366', color: '#25D366', padding: '1rem 2rem' }}>
             <MessageCircle size={20} /> {t.contact.whatsapp}
+          </a>
+          <a href="https://www.linkedin.com/in/islam-atef-a23962415?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noreferrer" className="btn btn-outline" style={{ borderColor: '#0077b5', color: '#0077b5', padding: '1rem 2rem' }}>
+            <Linkedin size={20} /> LinkedIn
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61590209263834" target="_blank" rel="noreferrer" className="btn btn-outline" style={{ borderColor: '#1877f2', color: '#1877f2', padding: '1rem 2rem' }}>
+            <Facebook size={20} /> Facebook
           </a>
         </div>
       </div>
